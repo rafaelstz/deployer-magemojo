@@ -13,7 +13,7 @@
 
 Use this tool integrated with the [Deployer](https://deployer.org/) to use the power of MageMojo Stratus CLI.
 
-If you are using Magento 2 you can use this [Magento 2 Deployer Recipe](https://github.com/rafaelstz/deployer-magento2) togheter!
+If you are using Magento 2 you can use this [Magento 2 Deployer Recipe](https://github.com/rafaelstz/deployer-magento2) together!
 
 Features
 -----
