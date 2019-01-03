@@ -12,6 +12,20 @@
 
 Use this tool integrated with the [Deployer](https://deployer.org/) to use the power of MageMojo Stratus CLI.
 
+Features
+-----
+
+You can run the command followed by **dep**. Example: `dep mm:cache:clear`.
+
+| Command | Description |
+|----------|-------------|
+| mm:autoscaling:reinit | It will issue a redeploy of PHP-FPM services |
+| mm:cache:clear | Clears everything |
+| mm:cloudfront:clear | Clears Cloudfront cache |
+| mm:opcache:clear | Clears OPCache cache |
+| mm:redis:clear | Clears Redis cache |
+| mm:varnish:clear | Clears Varnish cache |
+
 How to install
 -------
 
@@ -60,17 +74,9 @@ host('production')
 
 ```
 
-Features
+License
 -----
 
-You can run the command followed by **dep**. Example: `dep mm:cache:clear`.
+MIT
 
-| Command | Description |
-|----------|-------------|
-| mm:autoscaling:reinit | It will issue a redeploy of PHP-FPM services |
-| mm:cache:clear | Clears everything |
-| mm:cloudfront:clear | Clears Cloudfront cache |
-| mm:opcache:clear | Clears OPCache cache |
-| mm:redis:clear | Clears Redis cache |
-| mm:varnish:clear | Clears Varnish cache |
-
+[Rafael Correa Gomes](https://www.linkedin.com/in/rafaelcgstz/)
