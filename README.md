@@ -18,7 +18,7 @@ If you are using Magento 2 you can use this [Magento 2 Deployer Recipe](https://
 Features
 -----
 
-You can run the command followed by **dep**. Example: `dep mm:cache:clear`.
+You can run the command followed by **dep**. Example: `dep mm:cache:clear --stage=production`.
 
 | Command | Description |
 |----------|-------------|
