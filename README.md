@@ -5,9 +5,10 @@
     MageMojo Stratus Deployer Recipe
   <br>
 </h1>
-
-[![Build Status](https://travis-ci.org/rafaelstz/deployer-magemojo.svg?branch=master)](https://travis-ci.org/rafaelstz/deployer-magemojo)
+<div align="center">
+<a href="https://travis-ci.org/rafaelstz/deployer-magemojo"><img src="https://travis-ci.org/rafaelstz/deployer-magemojo.svg?branch=master" alt="Build Status"></a>
 <a href="https://packagist.org/packages/rafaelstz/deployer-magemojo"><img src="https://img.shields.io/packagist/dt/rafaelstz/deployer-magemojo.svg" alt="Total Downloads"></a>
+</div>
 
 Use this tool integrated with the [Deployer](https://deployer.org/) to use the power of MageMojo Stratus CLI.
 
