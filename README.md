@@ -63,6 +63,7 @@ after('success', 'mm:cache:clear');
 ```
 
 For example:
+-----
 
 ```php
 <?php
