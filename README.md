@@ -11,7 +11,7 @@
 <br><br>
 </div>
 
-Use this tool integrated with the [Deployer](https://deployer.org/) to use the power of MageMojo Stratus CLI.
+Use this tool integrated with the [Deployer](https://deployer.org/) to use the power of [MageMojo Stratus CLI](https://magemojo.com/kb/knowledge-base/stratus-cli/).
 
 If you are using Magento 2 you can use this [Magento 2 Deployer Recipe](https://github.com/rafaelstz/deployer-magento2) together!
 
@@ -50,7 +50,16 @@ How to use
 After install it, you can add the line below after the **namespace** and run `dep` to check:
 
 ```php
+// MageMojo Recipe
 require __DIR__ . '/vendor/rafaelstz/deployer-magemojo/MageMojo.php';
+```
+
+To add an automatic process of all cache clean and restart all services, add these into the bottom:
+
+```php
+// MageMojo restart services & cache clear
+after('success', 'mm:autoscaling:reinit');
+after('success', 'mm:cache:clear');
 ```
 
 For example:
@@ -59,6 +68,7 @@ For example:
 <?php
 
 namespace Deployer;
+// MageMojo Recipe
 require __DIR__ . '/vendor/rafaelstz/deployer-magemojo/MageMojo.php';
 
 // Project
@@ -74,6 +84,10 @@ host('production')
     ->set('deploy_path', '/home/my-project-folder')
     ->set('branch', 'master')
     ->stage('production');
+
+// MageMojo restart services & cache clear
+after('success', 'mm:autoscaling:reinit');
+after('success', 'mm:cache:clear');
 
 ```
 
