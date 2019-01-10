@@ -7,6 +7,7 @@
 </h1>
 <div align="center">
 <a href="https://travis-ci.org/rafaelstz/deployer-magemojo"><img src="https://travis-ci.org/rafaelstz/deployer-magemojo.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/rafaelstz/deployer-magento2/releases"><img src="https://img.shields.io/github/tag/rafaelstz/deployer-magento2.svg" alt="Tags"></a>
 <a href="https://packagist.org/packages/rafaelstz/deployer-magemojo"><img src="https://img.shields.io/packagist/dt/rafaelstz/deployer-magemojo.svg" alt="Total Downloads"></a>
 <br><br>
 </div>
@@ -41,7 +42,7 @@ curl -LO https://deployer.org/deployer.phar && sudo mv deployer.phar /usr/local/
 How to install this package:
 
 ```
-composer require rafaelstz/deployer-magemojo dev-master --dev
+composer require rafaelstz/deployer-magemojo --dev
 ```
 
 How to use
