@@ -41,7 +41,7 @@ curl -LO https://deployer.org/deployer.phar && sudo mv deployer.phar /usr/local/
 How to install this package:
 
 ```
-composer require rafaelstz/deployer-magemojo dev-master --dev
+composer require rafaelstz/deployer-magemojo --dev
 ```
 
 How to use
