@@ -40,3 +40,23 @@ desc('Clears Varnish cache');
 task('mm:varnish:clear', function () {
     run("{{stratus_cli}} cache.varnish.clear");
 });
+
+desc('Get database configuration');
+task('mm:database:config', function () {
+    write(run("{{stratus_cli}} database.config"));
+});
+
+desc('Show phpinfo options and values');
+task('mm:php:list', function () {
+    run("{{stratus_cli}} php.options.list");
+});
+
+desc('Add options and values to phpinfo');
+task('mm:php:add', function () {
+    run("{{stratus_cli}} php.options.add");
+});
+
+desc('Remove options from phpinfo');
+task('mm:php:remove', function () {
+    run("{{stratus_cli}} php.options.remove");
+});

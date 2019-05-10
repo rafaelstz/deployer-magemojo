@@ -23,12 +23,16 @@ You can run the command followed by **dep**. Example: `dep mm:cache:clear --stag
 
 | Command | Description |
 |----------|-------------|
-| mm:autoscaling:reinit | It will issue a redeploy of PHP-FPM services |
-| mm:cache:clear | Clears everything |
-| mm:cloudfront:clear | Clears Cloudfront cache |
-| mm:opcache:clear | Clears OPCache cache |
-| mm:redis:clear | Clears Redis cache |
-| mm:varnish:clear | Clears Varnish cache |
+| mm:autoscaling:reinit | Restart PHP-FPM |
+| mm:cache:clear | Invalidate CloudFront cache and flush opcache, Redis, Varnish |
+| mm:cloudfront:clear | Invalidate Cloudfront cache |
+| mm:opcache:clear | Flush OPCache cache |
+| mm:redis:clear | Clear Redis cache |
+| mm:varnish:clear | Clear Varnish cache |
+| mm:database:config | Get database configuration |
+| mm:php:list | Show phpinfo options and values |
+| mm:php:add | Add options and values to phpinfo |
+| mm:php:remove | Remove options from phpinfo |
 
 How to install
 -------
