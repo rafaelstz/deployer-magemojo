@@ -1,7 +1,6 @@
 {
   "name": "rafaelstz/deployer-magemojo",
   "description": "MageMojo Stratus Deployer Recipe",
-  "version": "1.0.0",
   "keywords": ["deployment", "deployer", "deploy", "tool", "magemojo"],
   "license": [
     "MIT"
