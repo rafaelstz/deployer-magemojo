@@ -40,3 +40,5 @@ desc('Clears Varnish cache');
 task('mm:varnish:clear', function () {
     run("{{stratus_cli}} cache.varnish.clear");
 });
+
+after('success', 'mm:cache:clear');

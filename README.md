@@ -55,12 +55,11 @@ After install it, you can add the line below after the **namespace** and run `de
 require __DIR__ . '/vendor/rafaelstz/deployer-magemojo/MageMojo.php';
 ```
 
-To add an automatic process of all cache clean and restart all services, add these into the bottom:
+This recipe when installed automatically will clean all caches after the deploy success, but if you want to restart all services, add these into the bottom:
 
 ```php
-// MageMojo restart services & cache clear
+// MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
-after('success', 'mm:cache:clear');
 ```
 
 For example:
@@ -87,9 +86,8 @@ host('production')
     ->set('branch', 'master')
     ->stage('production');
 
-// MageMojo restart services & cache clear
+// MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
-after('success', 'mm:cache:clear');
 
 ```
 
