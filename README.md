@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img src="https://magemojo.com/magento/skin/frontend/b-responsive/magemojo/images/mojostratus.png" alt="Tradução Magento 2 pt_BR" width="530" height="201" title="MageMojo Deployer Recipe"/> 
+    <img src="https://magemojo.com/magento/skin/frontend/b-responsive/magemojo/images/mojostratus.png" alt="Magemojo Stratus Deployer Recipe" width="298" height="62" title="MageMojo Deployer Recipe"/> 
   <br>
     MageMojo Stratus Deployer Recipe
   <br>
