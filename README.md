@@ -1,10 +1,13 @@
 <h1 align="center">
   <br>
-    <img src="https://magemojo.com/magento/skin/frontend/b-responsive/magemojo/images/mojostratus.png" alt="Tradução Magento 2 pt_BR" width="530" height="201" title="MageMojo Deployer Recipe"/> 
-  <br>
-    MageMojo Stratus Deployer Recipe
-  <br>
+    <img src="https://magemojo.com/magento/skin/frontend/b-responsive/magemojo/images/mojostratus.png" alt="Magemojo Stratus Deployer Recipe" width="400" height="83" title="MageMojo Deployer Recipe"/> 
 </h1>
+<h4>
+<p align="center">
+    Easily run cache clearing in your deployments
+  </p>
+</h4>
+
 <div align="center">
 <a href="https://travis-ci.org/rafaelstz/deployer-magemojo"><img src="https://travis-ci.org/rafaelstz/deployer-magemojo.svg?branch=master" alt="Build Status"></a>
 <a href="https://github.com/rafaelstz/deployer-magemojo/releases"><img src="https://img.shields.io/github/tag/rafaelstz/deployer-magemojo.svg" alt="Tags"></a>
@@ -58,6 +61,8 @@ require __DIR__ . '/vendor/rafaelstz/deployer-magemojo/MageMojo.php';
 This recipe when installed automatically will clean all caches after the deploy success, but if you want to restart all services, add these into the bottom:
 
 ```php
+// MageMojo clean all caches
+after('success', 'mm:cache:clear');
 // MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
 ```
@@ -86,6 +91,8 @@ host('production')
     ->set('branch', 'master')
     ->stage('production');
 
+// MageMojo clean all caches
+after('success', 'mm:cache:clear');
 // MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
 
