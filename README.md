@@ -62,6 +62,7 @@ This recipe when installed automatically will clean all caches after the deploy 
 
 ```php
 // MageMojo restart services
+after('success', 'mm:cache:clear');
 after('success', 'mm:autoscaling:reinit');
 ```
 
@@ -89,6 +90,8 @@ host('production')
     ->set('branch', 'master')
     ->stage('production');
 
+// MageMojo clean all caches
+after('success', 'mm:cache:clear');
 // MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
 
