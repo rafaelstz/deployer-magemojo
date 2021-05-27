@@ -61,10 +61,13 @@ require __DIR__ . '/vendor/rafaelstz/deployer-magemojo/MageMojo.php';
 This recipe when installed automatically will clean all caches after the deploy success, but if you want to restart all services, add these into the bottom:
 
 ```php
-// MageMojo clean all caches
-after('success', 'mm:cache:clear');
 // MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
+
+// MageMojo clean all caches
+after('success', 'mm:cloudfront:clear');
+after('success', 'mm:varnish:clear');
+after('success', 'mm:redis:clear');
 ```
 
 For example:
@@ -91,10 +94,13 @@ host('production')
     ->set('branch', 'master')
     ->stage('production');
 
-// MageMojo clean all caches
-after('success', 'mm:cache:clear');
 // MageMojo restart services
 after('success', 'mm:autoscaling:reinit');
+
+// MageMojo clean all caches
+after('success', 'mm:cloudfront:clear');
+after('success', 'mm:varnish:clear');
+after('success', 'mm:redis:clear');
 
 ```
 
