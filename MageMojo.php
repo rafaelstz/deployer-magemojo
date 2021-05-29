@@ -11,9 +11,29 @@ namespace Deployer;
 
 set('stratus_cli', '/usr/share/stratus/cli');
 
+desc('Stop Crons');
+task('mm:cron:stop', function () {
+    run("{{stratus_cli}} crons.stop");
+});
+
+desc('Start Crons');
+task('mm:cron:start', function () {
+    run("{{stratus_cli}} crons.start");
+});
+
+desc('Zero Downtime Deployment Init');
+task('mm:zdd:init', function () {
+    run("{{stratus_cli}} zerodowntime.init");
+});
+
+desc('Zero Downtime Deployment Switch');
+task('mm:zdd:switch', function () {
+    run("{{stratus_cli}} zerodowntime.switch 2>&1 | grep -q 'ERROR' && echo "[ERROR] Something went wrong, waiting and repeating switch one more time" && sleep 120 && /usr/share/stratus/cli zerodowntime.switch || echo "[SUCCESS]"");
+});
+
 desc('It will issue a redeploy of PHP-FPM services');
 task('mm:autoscaling:reinit', function () {
-    run("{{stratus_cli}} autoscaling.reinit");
+    run("{{stratus_cli}} autoscaling.reinit && sleep 120s");
 });
 
 desc('Clears everything');
