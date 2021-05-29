@@ -26,6 +26,10 @@ You can run the command followed by **dep**. Example: `dep mm:cache:clear --stag
 
 | Command | Description |
 |----------|-------------|
+| mm:cron:stop | Stop Crons from running |
+| mm:cron:start | Start crons |
+| mm:zdd:init | Zero Downtime Deployment Init |
+| mm:zdd:switch | Zero Downtime Deployment Switch with check |
 | mm:autoscaling:reinit | It will issue a redeploy of PHP-FPM services |
 | mm:cache:clear | Clears everything |
 | mm:cloudfront:clear | Clears Cloudfront cache |
