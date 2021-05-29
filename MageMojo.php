@@ -28,7 +28,7 @@ task('mm:zdd:init', function () {
 
 desc('Zero Downtime Deployment Switch');
 task('mm:zdd:switch', function () {
-    run("{{stratus_cli}} zerodowntime.switch 2>&1 | grep -q 'ERROR' && echo "[ERROR] Something went wrong, waiting and repeating switch one more time" && sleep 120 && /usr/share/stratus/cli zerodowntime.switch || echo "[SUCCESS]"");
+    run("{{stratus_cli}} zerodowntime.switch 2>&1 | grep -q \'ERROR\' && echo \"[ERROR] Something went wrong, waiting and repeating switch one more time\" && sleep 120 && /usr/share/stratus/cli zerodowntime.switch || echo \"[SUCCESS]\"");
 });
 
 desc('It will issue a redeploy of PHP-FPM services');
