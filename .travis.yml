@@ -19,7 +19,7 @@ addons:
       - acl
 
 install:
-  - composer self-update
+  - composer self-update 1.10.15
   - composer update --no-interaction --prefer-dist $COMPOSER_FLAGS
 
 script:
