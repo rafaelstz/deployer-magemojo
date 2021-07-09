@@ -66,6 +66,8 @@ This recipe when installed automatically will clean all caches after the deploy 
 
 ```php
 // MageMojo restart services
+before('deploy', 'mm:cron:stop');
+after('deploy', 'mm:cron:start');
 after('success', 'mm:autoscaling:reinit');
 
 // MageMojo clean all caches
