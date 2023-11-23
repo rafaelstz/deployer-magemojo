@@ -9,7 +9,7 @@
 </h4>
 
 <div align="center">
-<a href="https://travis-ci.org/rafaelstz/deployer-magemojo"><img src="https://travis-ci.org/rafaelstz/deployer-magemojo.svg?branch=master" alt="Build Status"></a>
+<a href="https://app.travis-ci.com/github/rafaelstz/deployer-magemojo"><img src="https://app.travis-ci.com/rafaelstz/deployer-magemojo.svg?branch=master" alt="Build Status"></a>
 <a href="https://github.com/rafaelstz/deployer-magemojo/releases"><img src="https://img.shields.io/github/tag/rafaelstz/deployer-magemojo.svg" alt="Tags"></a>
 <a href="https://packagist.org/packages/rafaelstz/deployer-magemojo"><img src="https://img.shields.io/packagist/dt/rafaelstz/deployer-magemojo.svg" alt="Total Downloads"></a>
 <br><br>
